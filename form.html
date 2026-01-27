@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier apprenant</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e5e4e4;
+            padding: 10px 20px;
+        }
+
+        .search {
+            display: flex;
+            width: 300px; /* Optional fixed width */
+        }
+
+        .search input {
+            flex: 1; /* Take remaining space */
+            height: 34px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .search button {
+            height: 34px; /* Same as input */
+            width: 50px;  /* Optional, matches input height */
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .search button:hover {
+            background-color: darkblue;
+            transform: scale(1.05);
+        }
+
+        /* Form container */
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        /* Each field */
+        .field {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 45%;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            height: 35px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Buttons at bottom */
+        .buttons {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .buttons button {
+            padding: 8px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .buttons button:hover {
+            background-color: #555;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="head">
+        <h1>Modifier les données d'un apprenant</h1>
+
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Rechercher">
+            <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <form>
+
+        <div class="menu">
+
+            <div class="field">
+                <i class="fa-solid fa-address-card"></i>
+                <input type="text" placeholder="CIN">
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Nom">
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-users"></i>
+                <input type="text" placeholder="Prénom">
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-cake-candles"></i>
+                <input type="date">
+            </div>
+
+            <div class="field gender">
+                <i class="fa-solid fa-mars"></i>
+                <input type="radio" name="gender" id="H">
+                <label for="H">Homme</label>
+
+                <i class="fa-solid fa-venus"></i>
+                <input type="radio" name="gender" id="F">
+                <label for="F">Femme</label>
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-house"></i>
+                <textarea rows="1" placeholder="Adresse"></textarea>
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-earth-americas"></i>
+                <select>
+                    <option value="">-- Select The Country --</option>
+                    <option>Brazil</option>
+                    <option>Morocco</option>
+                    <option>Japan</option>
+                    <option>Colombia</option>
+                </select>
+            </div>
+
+            <!-- Password + Repeat Password -->
+            <div class="field">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" id="password" placeholder="Mot de passe">
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" id="repeatPassword" placeholder="Répéter le mot de passe">
+            </div>
+
+            <div class="field">
+                <i class="fa-solid fa-book"></i>
+                <select>
+                    <option value="">-- Select a group --</option>
+                    <option>Informatique</option>
+                    <option>Gestion</option>
+                    <option>Mathématiques</option>
+                    <option>Physique</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <button  style=" height: 45px; border: 0px; border-radius:5px 5px; width:550px ; color: white; background-color: blue;" type="submit">Modifier</button>
+            <button style="height: 45px; border: 0px; border-radius:5px 5px ; width:200px ; color: white; background-color: red;" type="reset">Annuler</button>
+        </div>
+
+    </form>
+
+    <!-- JS for search button -->
+    <script>
+        const searchBtn = document.getElementById("searchBtn");
+        const searchInput = document.getElementById("searchInput");
+
+        searchBtn.addEventListener("click", function() {
+            const value = searchInput.value.trim();
+            if(value) {
+                alert("You searched for: " + value);
+            } else {
+                alert("Please enter something to search.");
+            }
+        });
+    </script>
+
+</body>
+</html>
