@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style type="text/css">
+        .head{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(229, 228, 228);
+        }
+        .head input{
+            display: flex;
+            height: 30px;
+        }
+        .head button{
+            display: flex;
+            height: 35px;
+            align-items: center;
+            background-color: blue;
+            width: 35px;
+            justify-content: center;
+            border-radius: 0px 5px 5px 0px;
+            color: white;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .icons{ 
+            
+            display: flex;
+            margin-top: 15px;
+            width: 70%;
+            height: 200px;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .icons input[type="text"],input[type="email"],input[type="date"],select,input[type="password"] {
+            border: 1px solid rgb(0, 0, 0);
+            width:250px ;
+            height: 30px;
+        }
+        .sl{
+            width: 270px;
+        }
+        .gt{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .gt input[type="text"]{
+            width: 542px;
+        }
+       .button{
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+       
+       }
+       .driss{
+        border: 2px solid rgb(86, 156, 255);
+        height: 450px;
+       }
+       .icons i{
+         color: rgb(47, 129, 252);
+       }
+       .driss hr{
+        color: blue;
+       }
+        .separator{
+            width: 75%;
+            margin: 40px auto;
+            border: 1.5px solid rgb(86, 156, 255);}
+    </style>
+</head>
+<body>
+    <div class="driss">
+   
+    <div class="head">
+        <h1>Modifier les donnees d'un apprenant</h1>
+        <div class="head">
+        <input type="text" placeholder="Code de l'apprenant" size="30">  
+        <button style="border: none;"><i class="fa-solid fa-magnifying-glass"></i></button>  
+        </div>
+    </div>
+    <div class="menu">
+        <div class="icons">
+        <i class="fa-solid fa-address-card"></i>
+        <input type="text" placeholder="Votre identifiant" name="text" id="text">
+    
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Votre prenom" name="textfield2">
+    
+        <i class="fa-solid fa-users"></i>
+        <input type="text" placeholder="Votre nom" name="textfield">
+    
+        <i class="fa fa-globe"></i>
+        <input type="email" placeholder="gmail" name="email">
+
+        <i class="fa-solid fa-cake-candles"></i>
+        <input type="date" name="date">
+        <div class="sl">
+            <i class="fa-solid fa-mars"></i>
+            <input type="radio" name="radio" id="H" value="Femme">
+            <label for="radio">Homme</label>
+            <i class="fa-solid fa-venus"></i>
+            <input type="radio" name="radio" id="F" value="Femme">
+            <label for="radio">Femme</label>
+        </div>
+        <div class="gt">
+        <i class="fa-solid fa-house"></i>
+        <input type="text" placeholder="Saisir Votre addresse">
+        </div>
+   
+
+            <i class="fa-solid fa-earth-americas"></i>
+            <select style="height: 40px;" name="select"id="select">  
+            <label for="option"><option selected disabled>-- Select The Country --</option></label>
+            <option>Brazil</option>
+            <option>Morocco</option>
+            <option>South America</option>
+            <option>Japan</option>
+            <option>Colombia</option>
+            </select>
+            
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="password" name="textfield3" id="textfield3">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <input type="password" placeholder="repeat Password" name="textfield3" id="textfield3" size="25">   
+
+
+        
+                
+      
+    <div class="">
+        <i class="fa-solid fa-book"></i>
+        <label for="groupe"></label>
+        <select  name="groupe"  id="groupe">
+            <option selected disabled value="">-- Select a group --</option>
+            <option value="1">Informatique</option>
+            <option value="2">Gestion</option>
+            <option value="3">Mathématiques</option>
+            <option value="4">Physique</option>
+        </select></div>
+    </div>
+    <hr class="separator">
+    
+    <div  class="button">
+        <button style="border-radius:5px 5px; height: 35px; width: 550px; color: white; background-color: rgb(1, 107, 255); border: none;">Modifier</button>
+        <button style="border-radius:5px 5px; height: 35px; width: 200px; color: white; background-color: red; border: none;">Annuler</button>
+    </div>
+   </div>
+</body>
+</html>
